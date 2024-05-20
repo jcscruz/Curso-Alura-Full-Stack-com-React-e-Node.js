@@ -1,3 +1,14 @@
+Curso de
+React: comece seu projeto full stack - 12hs
+
+Faça esse curso de React e:
+Compreenda os conhecimentos básicos teóricos e práticos de React
+Aplique a manutenção numa aplicação React
+Crie um website próprio usando React
+Coloque em prática as ferramentas mais utilizadas pelo mercado de trabalho front-end
+
+Concluído em 20/05/2024
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
