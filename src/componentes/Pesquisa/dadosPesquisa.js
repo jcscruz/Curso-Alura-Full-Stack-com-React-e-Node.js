@@ -89,9 +89,6 @@ export const livros = [
         {"nome": "Histórias de Guerreiros Lendários", "id": 86, "src": "https://images-na.ssl-images-amazon.com/images/I/81s6DUyQCZL.jpg"},
         {"nome": "Viagem ao Mundo dos Magos", "id": 87, "src": "https://images-na.ssl-images-amazon.com/images/I/81a4kCNuH+L.jpg"},
         {"nome": "Segredos do Antigo Egito", "id": 88, "src": "https://images-na.ssl-images-amazon.com/images/I/81Hce0JzmLL.jpg"},
-        {"nome": "Histórias de Aventuras no Espaço", "id": 89, "src": "https://images-na.ssl-images-amazon.com/images/I/81eB+7+CkUL.jpg"},
-        {"nome": "Contos de Valentes Cavaleiros", "id": 90, "src": "https://images-na.ssl-images-amazon.com/images/I/81wcnNQ-TBL.jpg"},
-        {"nome": "Explorando a Galáxia", "id": 91, "src": "https://images-na.ssl-images-amazon.com/images/I/81QpWUPzGWL.jpg"},
         {"nome": "Histórias de Grandes Navegadores", "id": 92, "src": "https://images-na.ssl-images-amazon.com/images/I/91HHxxtA1wL.jpg"},
         {"nome": "Viagem ao Mundo dos Heróis", "id": 93, "src": "https://images-na.ssl-images-amazon.com/images/I/71FXWMTUX7L.jpg"},
         {"nome": "Segredos do Mundo Antigo", "id": 94, "src": "https://images-na.ssl-images-amazon.com/images/I/81kAwnAh4oL.jpg"},
@@ -99,9 +96,7 @@ export const livros = [
         {"nome": "Contos de Aventuras no Mar", "id": 96, "src": "https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL.jpg"},
         {"nome": "Explorando o Mundo dos Dinossauros", "id": 97, "src": "https://images-na.ssl-images-amazon.com/images/I/81-7N-2HCZL.jpg"},
         {"nome": "Histórias de Viajantes do Tempo", "id": 98, "src": "https://images-na.ssl-images-amazon.com/images/I/81zpLhP1gWL.jpg"},
-        {"nome": "Viagem ao Mundo dos Faraós", "id": 99, "src": "https://images-na.ssl-images-amazon.com/images/I/81s6DUyQCZL.jpg"},
-        {"nome": "Segredos do Império Romano", "id": 100, "src": "https://images-na.ssl-images-amazon.com/images/I/81a4kCNuH+L.jpg"},
-        {"nome": "Histórias de Cientistas Famosos", "id": 101, "src": "https://images-na.ssl-images-amazon.com/images/I/81Hce0JzmLL.jpg"}
+        
     ]
     
 
