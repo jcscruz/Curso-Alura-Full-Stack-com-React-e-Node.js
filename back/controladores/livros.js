@@ -14,8 +14,17 @@ function getLivros (req, res){
 function getLivro(req, res){
     try{
         const id = req.params.id
-        livros =  getLivroPorId(id)
-        res.send(livros)        
+
+        if(id && Number(id)){
+            livros =  getLivroPorId(id)
+            res.send(livros)   
+        }else
+        {
+            res.status(422)
+            res.send("Id inválido.")
+        }
+
+       
     }catch(error){
         res.status(500)
         res.send(error.message)
@@ -24,10 +33,15 @@ function getLivro(req, res){
 
 function postLivro(req, res){
     try{
-        const novoLivro = req.body
-        insereLivro(novoLivro)
-        res.status(201)
-        res.send("Livro inserido com sucesso.")        
+        if(req.body.nome){
+            const novoLivro = req.body
+            insereLivro(novoLivro)
+            res.status(201)
+            res.send("Livro inserido com sucesso.")  
+        }else{
+            res.status(422)
+            res.send("O campo nome é obrigatório")
+        }      
     }catch(error){
         res.status(500)
         res.send(error.message)
@@ -36,11 +50,17 @@ function postLivro(req, res){
 
 function patchLivro(req, res){
     try{
-        const id = req.params.id
-        const modificacoes = req.body
-        alteraLivro(modificacoes, id)
-        res.status(201)
-        res.send("Livro alterado com sucesso.")        
+        if(id && Number(id)){
+            const id = req.params.id
+            const modificacoes = req.body
+            alteraLivro(modificacoes, id)
+            res.status(201)
+            res.send("Livro alterado com sucesso.")   
+        }else
+        {
+            res.status(422)
+            res.send("Id inválido.")
+        }
     }catch(error){
         res.status(500)
         res.send(error.message)
@@ -49,9 +69,16 @@ function patchLivro(req, res){
 
 function deleteLivro(req, res){
     try{
-        const id = req.params.id
-        livros =  deleteLivroPorId(id)
-        res.send("Livro apagado com sucesso.")         
+        if(id && Number(id)){
+            const id = req.params.id
+            livros =  deleteLivroPorId(id)
+            res.send("Livro apagado com sucesso.") 
+        }else
+        {
+            res.status(422)
+            res.send("Id inválido.")
+        }
+        
     }catch(error){
         res.status(500)
         res.send(error.message)
