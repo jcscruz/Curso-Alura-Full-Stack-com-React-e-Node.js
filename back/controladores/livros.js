@@ -1,6 +1,10 @@
+const fs = require("fs")
+const { getTodosLivros } = require("../servicos/livro.js")
+
 function getLivros (req, res){
     try{
-        res.send("Olá mundo :-)")        
+        livros =  getTodosLivros()
+        res.send(livros)        
     }catch(error){
         res.status(500)
         res.send(error.message)
@@ -8,5 +12,5 @@ function getLivros (req, res){
 }
 
 module.exports = {
-    getLivros
+    getLivros,
 }
