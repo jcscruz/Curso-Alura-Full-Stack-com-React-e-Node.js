@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Input from '../../componentes/Input/'
 import styled from 'styled-components'
-import { livros } from './dadosPesquisa'
+import { getLivros } from '../../servicos/livros'
 
 
 const PesquisaContainer = styled.section`
@@ -44,7 +44,18 @@ const Resultado = styled.div`
 `
 
 function Pesquisa(){
-    const [ livrosPesquisados, setLivrosPesquisados ] =  useState([])    
+    const [ livrosPesquisados, setLivrosPesquisados ] =  useState([])  
+    const [ livros, setLivros ] = useState([])  
+
+    useEffect(() => {
+        fetchLivros()
+    }, [])
+
+    async function fetchLivros(){
+        const livrosDaApi = await getLivros()
+        setLivros(livrosDaApi)
+    }
+    
     return (
         <PesquisaContainer>
             <Titulo>Já sabe por onde começar?</Titulo>
@@ -53,15 +64,17 @@ function Pesquisa(){
                 placeholder="Escreva sua próxima leitura"
                 onBlur={evento => {
                     const textoDigitado = evento.target.value
-                    const resultadoPesquisa = livros.filter( livro => livro.nome.includes(textoDigitado))
+                    const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
                     setLivrosPesquisados(resultadoPesquisa)
+                    console.log(livrosPesquisados)
                 }}
             />
             {livrosPesquisados.map(
                 livro => (
                     <Resultado>
+                        
                         <p>{livro.nome}</p>
-                        <img src={livro.src}></img>                        
+                        {/* <img src={livro.src}></img>                         */}
                     </Resultado>
                 )
             )}
