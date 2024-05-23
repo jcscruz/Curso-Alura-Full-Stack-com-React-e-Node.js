@@ -50,8 +50,8 @@ function postFavorito(req, res){
 
 function postFavoritoPorId(req, res){
     try{
+        const id = req.params.id
         if(id && Number(id)){
-            const id = req.params.id
             insereFavoritoPorId(id)
             res.status(201)
             res.send("Favorito inserido com sucesso.")   
@@ -68,8 +68,8 @@ function postFavoritoPorId(req, res){
 
 function deleteFavorito(req, res){
     try{
-        if(id && Number(id)){
-            const id = req.params.id
+        const id = req.params.id
+        if(id && Number(id)){            
             livros =  deleteFavoritoPorId(id)
             res.send("Livro apagado com sucesso.") 
         }else

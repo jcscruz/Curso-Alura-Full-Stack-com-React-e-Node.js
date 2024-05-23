@@ -25,10 +25,10 @@ function getFavoritoPorId(id){
 }
 
 function deleteFavoritoPorId(id){
-
+console.log(id)
     const livros = JSON.parse(fs.readFileSync("favoritos.json"))
 
-    const listaLivro = livros.filter(livro => livro.id !== id)
+    const listaLivro = livros.filter(livro => livro.id !== parseInt(id))
 
     fs.writeFileSync("favoritos.json", JSON.stringify(listaLivro))
 
@@ -38,8 +38,16 @@ function insereFavoritoPorId(id){
     const livros = JSON.parse(fs.readFileSync("livros.json"))
     const favoritos = JSON.parse(fs.readFileSync("favoritos.json"))
 
-    const livroInserido = livros.find( livro => livro.id === id)
+    const livroInserido = livros.find(livro => livro.id === parseInt(id))
+
     const novaListaDeLivrosFavoritos = [...favoritos, livroInserido]
+    console.log('favoritos')
+    console.log(favoritos)
+    console.log('livroInserido')
+    console.log(livroInserido)
+    console.log('novaListaDeLivrosFavoritos')
+    console.log(novaListaDeLivrosFavoritos)
+    
 
     fs.writeFileSync("favoritos.json", JSON.stringify(novaListaDeLivrosFavoritos))
 }

@@ -1,5 +1,6 @@
 const { Router } = require("express")
 const { getFavoritos, getFavoritoId, postFavorito, postFavoritoPorId, deleteFavorito } = require("../controladores/favoritos")
+const { deleteFavoritoPorId } = require("../servicos/favorito")
 
 const router = Router()
 
@@ -11,6 +12,6 @@ router.post('/', postFavorito)
 
 router.post('/:id', postFavoritoPorId)
 
-router.patch('/:id', deleteFavorito)
+router.delete('/:id', deleteFavorito)
 
 module.exports = router
