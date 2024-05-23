@@ -2,9 +2,7 @@ const { json } = require("express")
 const fs = require("fs")
 
 function getTodosLivros(){
-
     return JSON.parse(fs.readFileSync("livros.json"))
-
 }
 
 function getLivroPorId(id){
