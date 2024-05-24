@@ -6,3 +6,5 @@ Nesta formação vamos começar abordando conceitos-base do React, avançando co
 
 Curso Javascript Full Stack ReactJs e NodeJs
 Total de 28hrs
+
+Versão do node 16.15.1
